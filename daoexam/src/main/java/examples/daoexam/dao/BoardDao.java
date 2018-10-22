@@ -86,7 +86,7 @@ public class BoardDao {
 
     // board에서 id가 start인 것부터 limit개 만큼 가져온다
     public List<Board> getBoards(int start, int limit) {
-        String sql = "SELECT * FROM board WHERE id >= :start LIMIT :limit";
+        String sql = "SELECT id, title, name, content, regdate, read_count FROM board WHERE id >= :start LIMIT :limit";
         RowMapper<Board> rowMapper = BeanPropertyRowMapper.newInstance(Board.class);
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("start", start);

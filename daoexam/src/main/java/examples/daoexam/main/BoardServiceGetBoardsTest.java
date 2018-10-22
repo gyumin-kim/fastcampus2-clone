@@ -15,8 +15,7 @@ public class BoardServiceGetBoardsTest {
 
         List<Board> boardList = boardService.getBoards(2, 5);
 
-        for (Board board : boardList) {
+        for (Board board : boardList)
             System.out.println(board);
-        }
     }
 }

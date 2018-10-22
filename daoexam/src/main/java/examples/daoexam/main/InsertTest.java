@@ -10,9 +10,9 @@ import examples.daoexam.dao.RoleDao;
 public class InsertTest {
 
 	public static void main(String[] args) throws Exception {
-		ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+		ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 		
-		RoleDao roleDao =ac.getBean(RoleDao.class);
+		RoleDao roleDao = context.getBean(RoleDao.class);
 
 		Role role = new Role();
 		role.setRoleId(500);
@@ -22,5 +22,4 @@ public class InsertTest {
 		
 		System.out.println(count + "건 저장하였습니다.");
 	}
-
 }

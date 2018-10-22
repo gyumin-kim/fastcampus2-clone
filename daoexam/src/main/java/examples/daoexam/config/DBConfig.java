@@ -26,10 +26,10 @@ public class DBConfig {
         dataSource.setUrl(url);
         dataSource.setUsername(username);
         dataSource.setPassword(password);
-        System.out.println("[BasicDataSource InitialSize] " + dataSource.getInitialSize());
-        System.out.println("[BasicDataSource getMaxIdle] " + dataSource.getMaxIdle());
-        System.out.println("[BasicDataSource getMinIdle] " + dataSource.getMinIdle());
-        System.out.println("[BasicDataSource getNumActive] " + dataSource.getNumActive());
+//        System.out.println("[BasicDataSource InitialSize] " + dataSource.getInitialSize());
+//        System.out.println("[BasicDataSource getMaxIdle] " + dataSource.getMaxIdle());
+//        System.out.println("[BasicDataSource getMinIdle] " + dataSource.getMinIdle());
+//        System.out.println("[BasicDataSource getNumActive] " + dataSource.getNumActive());
         return dataSource;
     }
 

@@ -13,11 +13,9 @@ import java.util.Date;
 public class BoardInsertTest {
 
 	public static void main(String[] args) throws Exception {
-		ApplicationContext ac =
-				new AnnotationConfigApplicationContext(ApplicationConfig.class);
+		ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 
-		BoardDao boardDao
-				=ac.getBean(BoardDao.class);
+		BoardDao boardDao = context.getBean(BoardDao.class);
 
 //		Board board = new Board();
 //		board.setName("kim");

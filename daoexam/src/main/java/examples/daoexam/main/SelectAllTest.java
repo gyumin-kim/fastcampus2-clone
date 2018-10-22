@@ -12,13 +12,13 @@ import examples.daoexam.dto.Role;
 public class SelectAllTest {
 
 	public static void main(String[] args) throws Exception {
-		ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class); 
+		ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 		
-		RoleDao roleDao =ac.getBean(RoleDao.class);
+		RoleDao roleDao = context.getBean(RoleDao.class);
 
 		List<Role> list = roleDao.selectAll();
 		
-		for(Role role: list) {
+		for (Role role: list) {
 			System.out.println(role);
 		}
 	}

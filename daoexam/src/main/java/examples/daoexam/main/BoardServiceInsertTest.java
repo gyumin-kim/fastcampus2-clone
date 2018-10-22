@@ -12,9 +12,9 @@ import java.util.Date;
 public class BoardServiceInsertTest {
 
 	public static void main(String[] args) throws Exception {
-		ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+		ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 
-		BoardService boardService = ac.getBean(BoardService.class);
+		BoardService boardService = context.getBean(BoardService.class);
 
 		Board board = new Board();
 		board.setContent("hello content 2");

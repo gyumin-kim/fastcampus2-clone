@@ -11,12 +11,11 @@ import java.util.Date;
 public class BoardServiceSelectTest {
 
 	public static void main(String[] args) throws Exception {
-		ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+		ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 
-		BoardService boardService = ac.getBean(BoardService.class);
+		BoardService boardService = context.getBean(BoardService.class);
 		Board board = boardService.getBoard(1L);
 
 		System.out.println(board);
 	}
-
 }

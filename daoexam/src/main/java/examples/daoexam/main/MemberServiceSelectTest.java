@@ -9,9 +9,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class MemberServiceSelectTest {
 
 	public static void main(String[] args) throws Exception {
-		ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+		ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 
-		MemberService memberService = ac.getBean(MemberService.class);
+		MemberService memberService = context.getBean(MemberService.class);
 		Member member = memberService.getMember("Lee@gmail.com");
 
 		System.out.println(member);
