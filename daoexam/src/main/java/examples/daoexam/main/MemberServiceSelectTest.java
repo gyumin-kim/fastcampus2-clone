@@ -1,22 +1,19 @@
 package examples.daoexam.main;
 
 import examples.daoexam.config.ApplicationConfig;
-import examples.daoexam.dto.Board;
-import examples.daoexam.service.BoardService;
+import examples.daoexam.dto.Member;
+import examples.daoexam.service.MemberService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.util.Date;
-
-public class BoardServiceSelectTest {
+public class MemberServiceSelectTest {
 
 	public static void main(String[] args) throws Exception {
 		ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 
-		BoardService boardService = ac.getBean(BoardService.class);
-		Board board = boardService.getBoard(1L);
+		MemberService memberService = ac.getBean(MemberService.class);
+		Member member = memberService.getMember("Lee@gmail.com");
 
-		System.out.println(board);
+		System.out.println(member);
 	}
-
 }

@@ -12,17 +12,16 @@ import java.util.Date;
 public class BoardServiceInsertTest {
 
 	public static void main(String[] args) throws Exception {
-		ApplicationContext ac =
-				new AnnotationConfigApplicationContext(ApplicationConfig.class);
+		ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 
 		BoardService boardService = ac.getBean(BoardService.class);
 
 		Board board = new Board();
-		board.setContent("hello content 1");
-		board.setName("kim");
+		board.setContent("hello content 2");
+		board.setName("lee");
 		board.setReadCount(0);
 		board.setRegdate(new Date()); // java.util.Date
-		board.setTitle("title 1");
+		board.setTitle("title 2");
 
 		Board result = boardService.addBoard(board);
 		System.out.println(result);

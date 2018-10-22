@@ -5,6 +5,7 @@ import examples.daoexam.dto.Board;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -31,17 +32,16 @@ public class BoardServiceImpl implements BoardService {
         boardDao.updateCount(id);
         // 1건 읽어오고
         Board board = boardDao.getBoard(id);
-
         return board;
     }
 
     // 읽기 전용 메소드
     // start : 시작 id
-    // limit : 읽어올 수 
+    // limit : 읽어올 개수
     @Override
     @Transactional(readOnly = true)
     public List<Board> getBoards(int start, int limit) {
-        return null;
+        return boardDao.getBoards(start, limit);
     }
 }
 
