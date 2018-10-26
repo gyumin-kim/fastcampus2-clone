@@ -30,6 +30,7 @@ public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter {
 
     // 원래 WEB-INF 폴더는 브라우저에서 접근할 수 없지만,
     // InternalResourceViewResolver를 설정하면 WEB-INF 폴더 내의 JSP 파일을 view 화면으로 사용 가능
+    // InternalResourceViewResolver: UrlBasedViewResolver의 subclass
     @Bean
     public InternalResourceViewResolver getInternalResourceViewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
